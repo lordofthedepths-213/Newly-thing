@@ -1,0 +1,27 @@
+{
+  "name": "utility-mapper",
+  "version": "1.0.0",
+  "description": "Map underground utility locations, depths and install dates on iPhone and Android",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test",
+    "cap:add": "cap add android && cap add ios",
+    "cap:sync": "npm run build && cap sync",
+    "android": "npm run cap:sync && cap open android",
+    "ios": "npm run cap:sync && cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.6.10",
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.6.10",
+    "@capacitor/cli": "^7.6.10",
+    "@capacitor/ios": "^7.6.10",
+    "vite": "^8.3.7"
+  }
+}
